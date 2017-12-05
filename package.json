@@ -1,0 +1,26 @@
+{
+  "name": "halycon",
+  "version": "1.0.0",
+  "description": "koa2 restful api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "koa2",
+    "api"
+  ],
+  "author": "dshu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hc1213/halycon.git"
+  },
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0",
+    "koa-static": "^4.0.2",
+    "nodemon": "^1.12.4"
+  }
+}
