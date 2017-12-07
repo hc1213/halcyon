@@ -1,29 +1,19 @@
 const Koa = require('koa');
-const app = new Koa();
 const router = require('koa-router')();
-const koaBody = require('koa-body')
+const bodyParser = require('koa-bodyparser');
+const app = new Koa();
+const controller = require('./controller');
 
-app.use(koaBody())
-router.get('/',function(ctx,next){
-    ctx.body = {
-        data:{
-            name:'dshu',
-            age:24
-        }
-    }
-})
-router.post('/',function (ctx, next) {
-    let params = ctx.request.body;
-    console.log('id--->',params.code)
-    ctx.response.type = 'json';
-    ctx.body = {
-        data: {
-            name: 'dshu',
-            age: 25
-        }
-    }
-})
+// log request URL:
+app.use(async (ctx, next) => {
+    console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
+    await next();
+});
 
-app.use(router.routes())
+// parse request body:
+app.use(bodyParser());
+
+app.use(controller());
 app.listen(3000);
+console.log('app started at port 3000...');
 
