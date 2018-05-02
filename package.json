@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "keywords": [
     "koa2",
@@ -19,9 +19,16 @@
   },
   "dependencies": {
     "koa": "^2.4.1",
+    "koa-body": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
+    "koa-compose": "^4.0.0",
+    "koa-route": "^3.2.0",
     "koa-router": "^7.3.0",
     "koa-static": "^4.0.2",
-    "nodemon": "^1.12.4"
+    "mongodb": "^3.0.1",
+    "mongoose": "^4.13.6",
+    "nodemon": "^1.17.3",
+    "vue": "^2.5.11",
+    "vuex": "^3.0.1"
   }
 }
